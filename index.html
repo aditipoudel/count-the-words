@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            LETS COUNT!
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body style="background-color:rgb(192, 90, 90);">
+        <form action="index.php" method="post">
+        <div class="fullimage">
+    <h3>Please enter the text in the given area! </h3>
+    <form name="countword">
+        <textarea rows="15" name="countword1" cols="50" wrap="virtual" style=" color:whitesmoke ; background-color:black; 
+       font-size: 20px" ></textarea><br><br>
+       <input type="button" value="COUNT"  onclick="countit()">
+       <input type= "text"  name="countword2" size="20">
+    </form>
+    <script type="text/javascript">
+    function countit(){
+        var formcontent = document.countword.countword1.value
+        formcontent = formcontent.split(" ")
+        document.countword.countword2.value= formcontent.length
+    }
+    </script>
+    </div>
+</form>
+    </body>
+</html>
